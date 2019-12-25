@@ -1,0 +1,15 @@
+<navbar parameter='{{parameter}}'></navbar>
+<view class="box">
+<view class="box_input"><label>真实姓名</label><input placeholder="请输入您的真实姓名" placeholder-style="color:#B3B3B3"  bindinput="bindname" value='{{value}}' focus="{{focus}}"></input></view>
+<view class="box_input"><label>手机号码</label><input placeholder="请输入您的手机号码" placeholder-style="color:#B3B3B3" bindinput="bindmobile" value='{{value}}' focus="{{focus}}" maxlength="11"></input></view>
+<!-- <view class="box_input"><label>开户行</label><input placeholder="请输入开户行" placeholder-style="color:#B3B3B3" bindinput="bindopnebank" value='{{value}}' focus="{{focus}}"></input></view>
+<view class="box_input"><label>银行卡</label><input placeholder="请输入您的银行卡账号" placeholder-style="color:#B3B3B3" bindinput="bindbankcard" value='{{value}}' focus="{{focus}}" maxlength="19"></input></view> -->
+<view class="button" bindtap="tj">提交</view>
+</view>
+<!-- <view class="show" wx:if="{{pd==0}}"></view>
+<view class="show2" wx:if="{{pd==0}}">
+<view class="tit">你已提交资料，请等待审核</view>
+<view class="bot" bindtap="qd">确定</view>
+</view> -->
+
+

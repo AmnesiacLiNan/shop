@@ -1,0 +1,4 @@
+<navbar parameter='{{parameter}}'></navbar>
+<view>
+<image src="{{img}}"></image>
+</view>

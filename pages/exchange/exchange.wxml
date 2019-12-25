@@ -1,0 +1,49 @@
+<navbar parameter='{{parameter}}'></navbar>
+<view class="xzk">
+  <view bindtap="xz" data-code_num="0" class="{{code_num==0?'xzk_view':'xzk_view2'}}">未兑换</view>
+  <view bindtap="xz" data-code_num="2" class="{{code_num==2?'xzk_view':'xzk_view2'}}">已兑换</view>
+</view>
+<view class="xzk2">
+  <view class="xzk2_view">
+    <view bindtap="xz" data-code_num="0" class="{{code_num==0?'xzk_view3':'xzk_view2'}}"></view>
+  </view>
+  <view class="xzk2_view">
+    <view bindtap="xz" data-code_num="2" class="{{code_num==2?'xzk_view3':'xzk_view2'}}"></view>
+  </view>
+</view>
+<view class='coupon-list' wx:if="{{list.length}}">
+  <view class='item3 acea-row' wx:for="{{list}}" wx:key wx:if="{{item.status == code_num&&item.status==0}}" bindtap="tz" data-order_id="{{item.order_id}}">
+    <view class='money2 {{item.status == 0 ? "" : "moneyGray"}}'>
+      <!-- ￥<text class='num'>{{item.coupon_price}}</text> -->
+      兑换券
+    </view>
+    <view class='text'>
+      <view class='condition2 line1'>{{item.goods_name[0]}}</view>
+      <view class='data acea-row row-between-wrapper'>
+        <!-- <view>{{item._add_time}}-{{item._end_time}}</view> -->
+        <view class='bnt3 bg-color' wx:if="{{item.status==0}}">去使用</view>
+        <view class='bnt3 gray' wx:else>已使用</view>
+      </view>
+    </view>
+  </view>
+  <view class='item3 acea-row' wx:for="{{list}}" wx:key wx:if="{{item.status == code_num&&item.status==2}}" bindtap="tz" data-order_id="{{item.order_id}}">
+    <view class='money2 {{item.status == 0 ? "" : "moneyGray"}}'>
+      <!-- ￥<text class='num'>{{item.coupon_price}}</text> -->
+      兑换券
+    </view>
+    <view class='text'>
+      <view class='condition2 line1'>{{item.goods_name[0]}}</view>
+      <view class='data acea-row row-between-wrapper'>
+        <!-- <view>{{item._add_time}}-{{item._end_time}}</view> -->
+        <view class='bnt3 bg-color' wx:if="{{item.status==0}}">去使用</view>
+        <view class='bnt3 gray' wx:else>已使用</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='noCommodity' wx:if="{{!couponsList.length && loading==true}}">
+  <view class='pictrue'>
+    <image src='/images/noCoupon.png'></image>
+  </view>
+</view>
+<authorize bind:onLoadFun="onLoadFun"></authorize>

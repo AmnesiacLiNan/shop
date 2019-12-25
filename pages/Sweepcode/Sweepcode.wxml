@@ -1,0 +1,12 @@
+<navbar parameter='{{parameter}}'></navbar>
+<view class="title">扫描或输入客户商品兑换码</view>
+<view class="sm" bindtap="sm">
+  <image src="../../images/sweed_box.png" class="sm1"></image>
+  <image src="../../images/sm_box.png" class="sm2"></image>
+  <view>扫兑换码</view>
+</view>
+<view class="text">
+  <label>兑换码</label>
+  <input placeholder="请输入客户的兑换码" placeholder-style="font-weight: bold;color:#B3B3B3;font-size:32rpx;" bindinput="code" value='{{value}}' focus="{{focus}}"></input>
+</view>
+<view class="button {{num==1?'button2':''}}" bindtap="tj" >确定</view>

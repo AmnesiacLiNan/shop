@@ -1,0 +1,41 @@
+.xzk {
+  width: 100%;
+  display: flex;
+  background: white;
+}
+.xzk2 {
+  width: 100%;
+  display: flex;
+  background: white;
+}
+.xzk view {
+  width: 50%;
+  text-align: center;
+  height: 60rpx;
+  line-height: 70rpx;
+  font-weight: bold;
+}
+.xzk2_view {
+  width: 50%;
+  text-align: center;
+  height: 20rpx;
+  font-weight: bold;
+}
+.xzk_view {
+  color: #333;
+  font-weight: bold;
+}
+
+.xzk_view2 {
+  color: #666;
+  font-weight: bold;
+}
+
+.xzk_view3 {
+  border: 1px solid #ff5445;
+  margin: 0 auto;
+  width: 30rpx;
+  height: 8rpx;
+  background: #FF5445;
+  border-radius: 4px;
+}

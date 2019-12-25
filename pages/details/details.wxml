@@ -1,0 +1,56 @@
+  <navbar parameter='{{parameter}}'></navbar>
+<view class="box">
+  <view class="box_view">
+    <view class="name">{{list.productInfo.productInfo.store_name}}</view>
+    <view class="img">
+      <image src="{{list.productInfo.productInfo.image}}"></image>
+    </view>
+  </view>
+  <view class="fg">
+    <image src="../../images/fg.png"></image>
+  </view>
+  <view wx:if="{{list.status!=0}}" class="shadow"></view>
+  <image wx:if="{{list.status!=0}}" class="logo" src="../../images/ysy.png"></image>
+  <view class="box_view2">
+    <view class="bq">兑换商品</view>
+    <view class="panel">
+      <view class="qrcode">
+        <canvas canvas-id="qrcode" class="lucky-index-round"/>
+        <image src="{{imagePath2}}" class="imag"></image>
+      </view>
+      <view class="barcode">
+        <canvas canvas-id="barcode" class="lucky-index-round"/>
+        <image src="{{imagePath}}" class="imag2"></image>
+        <view class="barnum">{{code}}</view>
+      </view>
+    </view>
+    <view class="num">兑换码
+      <label class="barnum2">{{code}}</label>
+    </view>
+  </view>
+  <view class="fg">
+    <image src="../../images/fg.png"></image>
+  </view>
+  <view class="box_view3">
+    <view class="money">
+      <label class="money_left">实付金额</label>
+      <label class="money_right">{{list.pay_price}}元</label>
+    </view>
+    <view class="details">
+      <view>订单号：{{list.order_id}}</view>
+      <view>购买时间：{{list.add_time_y}} {{list.add_time_h}}</view>
+      <!-- <view>手机号：2132564789456487</view> -->
+    </view>
+  </view>
+  <view class="fg">
+    <image src="../../images/fg.png"></image>
+  </view>
+  <view class="box_view4">
+    <view class="bq">使用规格</view>
+    <view class="details">
+      <view>1.卡券均不可找零、兑换及提现，一旦用户领取成功， 不得转让或者给他人使用；
+      </view>
+      <view>2.卡券使用期限应当以用户所领取的卡券标明的使用</view>
+    </view>
+  </view>
+</view>
